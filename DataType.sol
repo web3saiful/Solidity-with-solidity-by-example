@@ -36,6 +36,33 @@ contract Primitives {
 
 
 
-    
 
+
+
+
+
+
+ /*
+    In Solidity, the data type byte represent a sequence of bytes. 
+    Solidity presents two types of bytes :
+
+     - fixed-sized byte arrays
+     - dynamically-sized byte arrays.
+     
+     The term bytes in Solidity represents a dynamic array of bytes. 
+     It’s a shorthand for byte[] .
+    */
+    bytes1 a = 0xb5; //  [10110101]
+    bytes1 b = 0x56; //  [01010110]
+
+    // Default values
+    // Unassigned variables have a default value
+    bool public defaultBoo; // false
+    uint256 public defaultUint; // 0
+    int256 public defaultInt; // 0
+    address public defaultAddr; // 0x0000000000000000000000000000000000000000
+
+
+
+    
 }
