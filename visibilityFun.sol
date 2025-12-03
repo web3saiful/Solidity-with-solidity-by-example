@@ -18,8 +18,21 @@ contract VisibilityBase{
     function externalFun()external pure returns(uint){
 
     }
-    
+
     function examples()external view{
         x+y+z;
+        privateFunction();
+        internalFun();
+        publicFunc();
+        // externalFun(); NOt
+        this.externalFun();
+    }
+}
+
+contract VisibilityChild is VisibilityBase{
+    function examples2() external view{
+        y+z;
+        internalFun();
+        publicFunc();
     }
 }
