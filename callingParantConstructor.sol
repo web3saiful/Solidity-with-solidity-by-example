@@ -26,5 +26,12 @@ contract V is S,T{
    constructor (string memory _name,string memory _text)S(_name)T(_text){
 
 
+   }
+}
+contract VV is S("s"),T{
+    constructor(string memory _text)T(_text){
+
+    }
+}
 
 
