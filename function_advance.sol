@@ -88,6 +88,29 @@ contract A {
     }
 }
 
+contract B is A {
+    function foo() public virtual override {
+        emit Log("B.foo called");
+        A.foo();
+    }
+
+    function bar() public virtual override {
+        emit Log("B.bar called");
+        super.bar();
+    }
+}
+
+contract C is A {
+    function foo() public virtual override {
+        emit Log("C.foo called");
+        A.foo();
+    }
+
+    function bar() public virtual override {
+        emit Log("C.bar called");
+        super.bar();
+    }
+}
 
 
 
