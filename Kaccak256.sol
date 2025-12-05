@@ -12,5 +12,11 @@ function endcode(string memory text0,string memory text1)external pure returns(b
     }
 
 
-
+function endcodePacked(string memory text0,string memory text1)external pure returns(bytes memory){
+    return abi.encodePacked(text0,text1);
+    }
+ 
+function collision(string memory text0,string memory text1)external pure returns(bytes32){
+    return keccak256(abi.encodePacked(text0,text1));
+ }
 }
