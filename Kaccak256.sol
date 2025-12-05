@@ -7,5 +7,10 @@ contract HashFun{
     }
 
 
+function endcode(string memory text0,string memory text1)external pure returns(bytes memory){
+    return abi.encode(text0,text1);
+    }
+
+
 
 }
